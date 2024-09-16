@@ -1,0 +1,58 @@
+/* ($(Get-Date)) */
+
+.slider-wrapper {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  justify-content: end;
+  row-gap: 100px;
+  width: 50%;
+  height: 40%;
+  margin: auto;
+  border: 2px solid red;
+  overflow: hidden;
+  font-size: 20px;
+}
+
+.slider-content {
+  display: flex;
+  width: 200px;
+  height: 100px;
+  /* margin-left: -100px; */
+  border: 2px solid blue;
+}
+
+.slide {
+  width: 50%;
+  height: 100%;
+  border: 2px solid black;
+}
+
+.slider-images {
+  display: flex;
+}
+
+label {
+  display: none;
+}
+
+#id2:checked .slide {
+  background-color: yellow;
+  /* margin-left: -100px; */
+}
+
+#id1:checked ~ label:nth-of-type(1) {
+  display: inline;
+}
+
+#id2:checked ~ label:nth-of-type(2) {
+  display: inline;
+}
+
+#id2:checked ~ label ~ div > div {
+  background-color: yellow;
+}
+
+.slider-picture {
+  width: 100%;
+}
